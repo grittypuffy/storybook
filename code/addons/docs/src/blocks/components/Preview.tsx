@@ -245,7 +245,7 @@ export const Preview: FC<PreviewProps> = ({
               variant="ghost"
               className="docblock-code-toggle docblock-code-toggle--disabled"
             >
-              <MarkupIcon /> No code available
+              <MarkupIcon focusable="false" aria-hidden="true" /> No code available
             </Button>
           )}
           {hasValidSource && (
@@ -260,10 +260,11 @@ export const Preview: FC<PreviewProps> = ({
                 variant="ghost"
                 className={`docblock-code-toggle${expanded ? ' docblock-code-toggle--expanded' : ''}`}
               >
-                <MarkupIcon /> {expanded ? 'Hide code' : 'Show code'}
+                <MarkupIcon focusable="false" aria-hidden="true" />{' '}
+                {expanded ? 'Hide code' : 'Show code'}
               </ToggleButton>
               <Button lang="en" ariaLabel={false} variant="ghost" onClick={handleCopyCode}>
-                <CopyIcon /> {copied ?? 'Copy code'}
+                <CopyIcon focusable="false" aria-hidden="true" /> {copied ?? 'Copy code'}
               </Button>
             </>
           )}

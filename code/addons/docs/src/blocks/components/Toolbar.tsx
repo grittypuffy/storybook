@@ -92,7 +92,7 @@ export const Toolbar: FC<ToolbarProps> = ({
               onClick={onReloadStory}
               ariaLabel="Reload story"
             >
-              <SyncIcon />
+              <SyncIcon focusable="false" aria-hidden="true" />
             </Button>
           )}
           <Button
@@ -105,7 +105,7 @@ export const Toolbar: FC<ToolbarProps> = ({
             }}
             ariaLabel="Zoom in"
           >
-            <ZoomIcon />
+            <ZoomIcon focusable="false" aria-hidden="true" />
           </Button>
           <Button
             padding="small"
@@ -117,7 +117,7 @@ export const Toolbar: FC<ToolbarProps> = ({
             }}
             ariaLabel="Zoom out"
           >
-            <ZoomOutIcon />
+            <ZoomOutIcon focusable="false" aria-hidden="true" />
           </Button>
           <Button
             padding="small"
@@ -129,7 +129,7 @@ export const Toolbar: FC<ToolbarProps> = ({
             }}
             ariaLabel="Reset zoom"
           >
-            <ZoomResetIcon />
+            <ZoomResetIcon focusable="false" aria-hidden="true" />
           </Button>
         </>
       )}
@@ -150,7 +150,7 @@ export const Toolbar: FC<ToolbarProps> = ({
             ariaLabel="Open canvas in new tab"
           >
             <a href={getStoryHref(storyId)} target="_blank" rel="noopener noreferrer">
-              <ShareAltIcon />
+              <ShareAltIcon focusable="false" aria-hidden="true" />
             </a>
           </Button>
         </Wrapper>
